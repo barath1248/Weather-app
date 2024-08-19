@@ -18,6 +18,8 @@ if(response.status==404){
     document.querySelector(".humidity").innerHTML = data.data[0].rh + "%";
     document.querySelector(".wind").innerHTML = data.data[0].wind_spd + " km/h";
 
+document.querySelector(".weather").style.display="block";
+    document.querySelector(".error").style.display="none";
    if(data.data[0].weather.description== 'Clear sky'){
         weatherIcon.src ="images/clear.png";
     }
@@ -36,8 +38,7 @@ if(response.status==404){
     else if(data.data[0].weather.description=="Drizzile"){
         weatherIcon.src ="images/drizzile.png";
     }
-    document.querySelector(".weather").style.display="block";
-    document.querySelector(".error").style.display="none";
+    
     }
 }
 
